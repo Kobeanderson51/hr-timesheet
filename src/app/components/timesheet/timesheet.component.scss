@@ -1,0 +1,47 @@
+h2 {
+    text-align: center;
+    color: #000000; /* Violet color */
+}
+
+.cards {
+    margin: auto;
+    color: #9c27b0; /* Violet color for all text in .cards */
+}
+
+mat-form-field {
+    width: calc(100% - 40px);
+}
+mat-card {
+    margin: auto;
+    padding: 20px;
+    background-color: grey;
+}
+mat-icon {
+}
+
+.hours {
+    min-height: 200px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f3e5f5; /* Light violet background */
+}
+
+.hours-input {
+    max-width: 75px;
+    margin-left: 15px;
+    text-align: center;
+    color: black/* Pink text color */
+}
+
+.total-cell {
+    text-align: center;
+    color: #9c27b0; /* Violet color */
+}
+
+.submit {
+    width: 75px;
+    margin-left: auto;
+    margin-top: 15px;
+}

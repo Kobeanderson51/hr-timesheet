@@ -10,6 +10,14 @@ import { AnalyticsComponent } from './components/analytics/analytics.component';
 import { TopNavbarComponent } from './components/top-navbar/top-navbar.component';
 import { AnalyticsTableComponent } from './components/analytics-table/analytics-table.component';
 import { MaterialModule } from './modules/material/material.module';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from '../app/environmnents/environment';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 @NgModule({
   declarations: [
@@ -18,12 +26,26 @@ import { MaterialModule } from './modules/material/material.module';
     TimesheetComponent,
     AnalyticsComponent,
     TopNavbarComponent,
-    AnalyticsTableComponent
+    AnalyticsTableComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    MatInputModule,
+  MatFormFieldModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
+    
+  ],
+  exports: [
+    MaterialModule,
+    MatInputModule,
+MatFormFieldModule,
+ReactiveFormsModule
   ],
   providers: [
     provideAnimationsAsync()
